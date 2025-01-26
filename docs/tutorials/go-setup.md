@@ -32,7 +32,10 @@ We will:
 
 ### **Create a blank folder for your new project:**
 
-### *3.1* Create new folder (ex: 'my-go-docs'):
+Open your terminal and set directory to where you want to set up the dev container
+
+### *3.1* Create new directory (ex: 'my-go-docs'):
+Inputing these commands into the terminal will create a new directory
 
 ```bash
 mkdir my-go-docs
@@ -44,10 +47,21 @@ cd my-go-docs
 git init 
 ```
 
-## 4. Dev Container Configuration File 
-### **Create a Dev container and configure it for your new project:**
+### *3.3* Adding a README file
+```bash
+echo "# Go Dev Container" > README.md
+git add README.md
+git commit -m "Initial commit with README.md file"
+```
 
-Add a Dev container configuration by creating `.devcontainer/devcontainer.json`
+
+## 4. Dev Container Configuration 
+### **Create a Dev container and configure it for your new project:**
+In your previously initialized directory, set up the dev container configuration by creating a hidden folder named `.devcontainer`. Inside this folder, add a `.json` file `named devcontainer.json`.
+
+Dev container configuration path should be as follows: `.devcontainer/devcontainer.json`
+
+In this `.json` file input the following configurations
 ```json
 {
     "name": "Go Dev Container",
