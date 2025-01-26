@@ -3,10 +3,11 @@
 * Primary author: [Daniel Islas](https://github.com/DanielBautista7799)
 * Reviewer: [Emily Chen](https://github.com/emsesc)
 
-Suggestion: add some details or an introduction here about what people will learn/do in this tutorial.
+This tutorial is a walk-through on how you go through setting up a Go development environment using Docker dev containers in VS code. By the end of this guide, you’ll have a fully functional environment to write, compile, and run a “Hello COMP423” program in Go without having to install Go on your local machine.
+
 
 ## 1. Prerequisites
-**Host Machine Setup Only**
+### **Host Machine Setup Only**
 
 - Install [Docker](https://docs.docker.com/engine/install/) (for containers)
 - Install [Visual Studio Code](https://code.visualstudio.com/download) (editing and Dev containers)
@@ -29,21 +30,23 @@ We will:
 
 ## 3. Start from a Blank Directory and Git Initialize
 
- **Create a blank folder for your new project:**
+### **Create a blank folder for your new project:**
 
- *3.1* Create new folder (ex: 'my-go-docs'):
+### *3.1* Create new folder (ex: 'my-go-docs'):
 
 ```bash
 mkdir my-go-docs
 cd my-go-docs
 ```
 
-*3.2* Initialize Git in the folder
+### *3.2* Initialize Git in the folder
 ```bash 
 git init 
 ```
 
 ## 4. Dev Container Configuration File 
+### **Create a Dev container and configure it for your new project:**
+
 Add a Dev container configuration by creating `.devcontainer/devcontainer.json`
 ```json
 {
@@ -59,16 +62,22 @@ Add a Dev container configuration by creating `.devcontainer/devcontainer.json`
     }
 }
 ```
-Suggestion: maybe explain a bit more about what the configuration file is for and what it does.
+### What does the Dev container do?
+- "name": Sets the container name in VS Code.
+- "image": Uses Microsoft's prebuilt Go development Docker image.
+- "features": Adds tools/configurations to the container. Left empty in this tutorial but can include utilities like Docker CLI.
+- "customizations": Installs the Go VS Code extension (golang.go) for better support with IntelliSense, formatting, and debugging.
+
 !!! Note 
     We install the Go VS Code extension: "golang.go".
     By using docker image you avoid installing it on your host.
     Do not install Go locally on your machine. We rely on the Docker dev container.
 
 ## 5. Steps to Create a New Project, Write a Basic "Hello COMP423" Program, Compile, and Run
+### **Setting up Dev container to write new program** 
 *5.1* Open VS Code and Reopen the folder in Dev container (VS code will detect the `.devcontainer/devcontainer.json`)
 
-!!! Note
+!!! tip
     To reopen the folder in dev container in VS code input 'Shift + CTRL/COMMAND + P' to open the command pallette and select to Reopen in Dev Container
 
 *5.2*: Verify Your Go Installation
@@ -83,6 +92,7 @@ go version go1.20 linux/amd64
     This confirms Go is installed inside the Docker container and not on your host machine.
 
 
+### **Basic Program for Go**
 
 *5.3* Inside the Dev container create a file named `main.go` in this file input code for Hello COMP423
 ```go
@@ -98,6 +108,7 @@ func main() {
 ```bash
 go mod init example.com/my-go-docs
 ```
+### **Execution**
 *5.5* Run the program directly 
 ```bash 
 go run main.go
@@ -114,7 +125,7 @@ This creates the file `main` which can then be run with:
 ```bash 
 ./main
 ```
-**When ran outputs:**
+### **Final Output**
 
 `Hello COMP423`
 
