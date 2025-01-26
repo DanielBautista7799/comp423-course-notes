@@ -31,14 +31,14 @@ We will:
 
  **Create a blank folder for your new project:**
 
- *Step 1:* Create new folder (ex: 'my-go-docs'):
+ *3.1* Create new folder (ex: 'my-go-docs'):
 
 ```bash
 mkdir my-go-docs
 cd my-go-docs
 ```
 
-*Step 2:* Initialize Git in the folder
+*3.2* Initialize Git in the folder
 ```bash 
 git init 
 ```
@@ -66,12 +66,12 @@ Suggestion: maybe explain a bit more about what the configuration file is for an
     Do not install Go locally on your machine. We rely on the Docker dev container.
 
 ## 5. Steps to Create a New Project, Write a Basic "Hello COMP423" Program, Compile, and Run
-*Step 1:* Open VS Code and Reopen the folder in Dev container (VS code will detect the `.devcontainer/devcontainer.json`)
+*5.1* Open VS Code and Reopen the folder in Dev container (VS code will detect the `.devcontainer/devcontainer.json`)
 
 !!! Note
     To reopen the folder in dev container in VS code input 'Shift + CTRL/COMMAND + P' to open the command pallette and select to Reopen in Dev Container
 
-*Step 1.5*: Verify Your Go Installation
+*5.2*: Verify Your Go Installation
 ```bash
 go version
 ```
@@ -84,7 +84,7 @@ go version go1.20 linux/amd64
 
 
 
-*Step 2:* Inside the Dev container create a file named `main.go` in this file input code for Hello COMP423
+*5.3* Inside the Dev container create a file named `main.go` in this file input code for Hello COMP423
 ```go
 package main
 
@@ -94,11 +94,11 @@ func main() {
     fmt.Println("Hello COMP423")
 }
 ```
-*Step 3:* Initialize Go modules: Create a `go.mod` file
+*5.4* Initialize Go modules: Create a `go.mod` file
 ```bash
 go mod init example.com/my-go-docs
 ```
-*Step 4:* Run the program directly 
+*5.5* Run the program directly 
 ```bash 
 go run main.go
 ```
@@ -106,7 +106,7 @@ This should output
 ```bash 
 Hello COMP423
 ```
-*Step 5:* Build an executable 
+*5.6* Build an executable 
 ```bash 
 go build main.go
 ```
