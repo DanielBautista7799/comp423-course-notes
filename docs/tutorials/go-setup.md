@@ -3,27 +3,29 @@
 * Primary author: [Daniel Islas](https://github.com/DanielBautista7799)
 * Reviewer: [Emily Chen](https://github.com/emsesc)
 
+Suggestion: add some details or an introduction here about what people will learn/do in this tutorial.
+
 ## 1. Prerequisites
 **Host Machine Setup Only**
 
-- Install Docker (for containers)
-- Install Visual Studio Code (editing and Dev containers)
-- Install Git (version control)
+- Install [Docker](https://docs.docker.com/engine/install/) (for containers)
+- Install [Visual Studio Code](https://code.visualstudio.com/download) (editing and Dev containers)
+- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) (version control)
 
 !!! Note
-    **Do not install GO directly on host machine.** Host machine should only have Docker, VS code and Git downloaded.
+    **Do not install GO directly on host machine.** Host machine should only have Docker, VS Code and Git downloaded.
     We are going to use a Docker dev container through VS code dev containers
 
-## 2. Step-by-step overview for instructions on a new Dev Container project for your language
+## 2. Step-by-step overview for instructions on a new Dev Container project for GO
 
 We will:
 
-1. Create a blank folder (Step 3)
-2. Initialize Git in that folder (Step 3)
-3. Provide a Dev Container configuration (Step 4)
-4. Write and run a simple “Hello COMP423” program (Step 5)
+1. Create a blank folder (Section 3)
+2. Initialize Git in that folder (Section 3)
+3. Provide a Dev Container configuration (Section 4)
+4. Write and run a simple “Hello COMP423” program (Section 5)
 
-**This overview helps us see what we are going to do before we go indepth into each step.**
+**This overview helps us see what we are going to do before we go in depth into each step.**
 
 ## 3. Start from a Blank Directory and Git Initialize
 
@@ -57,6 +59,7 @@ Add a Dev container configuration by creating `.devcontainer/devcontainer.json`
     }
 }
 ```
+Suggestion: maybe explain a bit more about what the configuration file is for and what it does.
 !!! Note 
     We install the Go VS Code extension: "golang.go".
     By using docker image you avoid installing it on your host.
